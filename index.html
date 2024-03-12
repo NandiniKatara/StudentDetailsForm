@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details Form</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body style="padding: 4rem;">
 
-    <form class="form_main" id="studentForm">
-
-        <h2 style="text-align: center; width: 100%; color: #30015f;">Student Details Form</h2>
+    <form id="studentForm">
+        
+        <h2 style="text-align: center; color: #30015f;">Student Details Form</h2>
 
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" name="firstName" required>
@@ -41,15 +41,13 @@
         <label for="hobbies">Hobbies (comma separated):</label>
         <input type="text" id="hobbies" name="hobbies" required>
 
-        <div class="button_container">
-            <button type="button" id="addDetailsBtn" class="button">Add Details</button>
-        </div>
-
+        <button type="button" onclick="submitPersonDetails()" class="button">Add Details</button>
+        <br/>
+        <br/>
         <input type="text" id="roll" placeholder="Enter roll no. here">
-        <div class="button_container">
-            <button id="getDetailsBtn" class="button">Get Details</button>
-        </div>
-        <ul class="retArray" id="detailsContent"></ul>
+        <button onclick="displayDetails(event)" class="button">Get Details</button>
+        <div></div>
+        <ul class="retArray" id="detailsContent" ></ul>
     </form>
     <script src="index.js"> </script>
 
